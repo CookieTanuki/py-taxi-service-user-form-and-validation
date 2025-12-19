@@ -8,6 +8,7 @@ from taxi.models import Car
 
 Driver = get_user_model()
 
+
 def clean_license_number(license_number: str) -> str:
     if len(license_number) != 8:
         raise ValidationError(
@@ -34,10 +35,10 @@ class DriverCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = Driver
         fields = (
-            'username',
-            'password1',
-            'password2',
-            'license_number'
+            "username",
+            "password1",
+            "password2",
+            "license_number"
         )
 
     def clean_license_number(self):
@@ -59,6 +60,7 @@ class CarForm(ModelForm):
         widget=forms.CheckboxSelectMultiple,
         required=False,
     )
+
     class Meta:
         model = Car
         fields = "__all__"
