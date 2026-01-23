@@ -5,8 +5,8 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .models import Car, Manufacturer
-from .forms import DriverCreationForm, DriverLicenseUpdateForm, CarForm
+from .models import (Car, Manufacturer)
+from .forms import (DriverCreationForm, DriverLicenseUpdateForm)
 
 
 Driver = get_user_model()
