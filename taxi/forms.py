@@ -32,7 +32,7 @@ def clean_license_number(license_number: str) -> str:
 
 
 class DriverCreationForm(UserCreationForm):
-    class Meta(UserCreationForm):
+    class Meta(UserCreationForm.Meta):
         model = Driver
         fields = (
             "username",
